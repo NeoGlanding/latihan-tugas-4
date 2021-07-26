@@ -1,5 +1,9 @@
 'use strict';
 
+function clear(id) {
+    document.getElementById(id).value = '';
+}
+
 function login(e) {
     e.preventDefault();
     const username = document.getElementById('username').value;
@@ -9,25 +13,9 @@ function login(e) {
     } else {
         alert('Login gagal');
     }
-    document.getElementById('username').value = '';
-    document.getElementById('password').value = '';
+    clear('username');
+    clear('password');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function signup(e) {
     e.preventDefault();
@@ -35,4 +23,7 @@ function signup(e) {
     const password = document.getElementById('password-signup').value;
     const email = document.getElementById('email').value;
     alert('Berhasil');
+    clear('username-signup');
+    clear('password-signup');
+    clear('email');
 }
