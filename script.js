@@ -27,3 +27,18 @@ function signup(e) {
     clear('password-signup');
     clear('email');
 }
+
+function closeModal() {
+    document.getElementsByClassName('modal')[0].classList.add('hidden');
+}
+
+function showModal (message) {
+    document.getElementsByClassName('modal__message')[0].innerHTML = message;
+    document.getElementsByClassName('modal')[0].classList.remove('hidden');
+}
+
+function show(showclass, hiddenclass1, hiddenclass2) {
+    document.getElementsByClassName(showclass)[0].classList.remove('hidden');
+    document.getElementsByClassName(hiddenclass1)[0].classList.add('hidden');
+    document.getElementsByClassName(hiddenclass2)[0].classList.add('hidden');
+}
